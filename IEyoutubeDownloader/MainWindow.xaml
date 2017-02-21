@@ -13,11 +13,18 @@
             <GradientStop Color="#FFCDFBEF" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
-    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
-        <WrapPanel Orientation="Vertical">
-            <Button Width="250">1</Button>
-            <Button Width="250">2</Button>
-            <Button Width="250">3</Button>
-        </WrapPanel>
-    </ScrollViewer>
+    <Grid>
+        <Border Margin="10" BorderBrush="Black" BorderThickness="2" Width="400" HorizontalAlignment="Left">
+            <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical" Width="400">
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+        <Grid HorizontalAlignment="Right" Margin="10" Width="355">
+            <Border BorderBrush="Black" BorderThickness="2" Margin="0,0,0,167" />
+            <Border BorderBrush="Black" BorderThickness="2" VerticalAlignment="Bottom" RenderTransformOrigin="0.502,-0.958" Height="156"  />
+        </Grid>
+
+    </Grid>
+
 </Window>
