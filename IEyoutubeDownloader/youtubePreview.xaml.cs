@@ -53,7 +53,6 @@ namespace IEyoutubeDownloader
         private void url_block_mouse_leave(object sender, MouseEventArgs e)
         {
             ((TextBlock)sender).Foreground = new SolidColorBrush(Colors.Transparent);
-
         }
     }
 }
