@@ -23,6 +23,15 @@ namespace IEyoutubeDownloader
         public MainWindow()
         {
             InitializeComponent();
+
+            List<youtubePreview> ytItemsList = new List<youtubePreview>();
+            ytItemsList.Add(new youtubePreview());
+            ytItemsList.Add(new youtubePreview());
+            ytItemsList.Add(new youtubePreview());
+            ytItemsList.Add(new youtubePreview());
+            ytItemsList.Add(new youtubePreview());
+            itemcontrolYT.ItemsSource = ytItemsList;
+
         }
     }
 }

@@ -15,9 +15,9 @@
     <Grid>
         <Border Margin="10" BorderBrush="Black" BorderThickness="2" Width="400" HorizontalAlignment="Left">
             <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left">
-                <StackPanel Orientation="Vertical" Width="400">
+                <ItemsControl x:Name="itemcontrolYT">
                     
-                </StackPanel>
+                </ItemsControl>
             </ScrollViewer>
         </Border>
         <Grid HorizontalAlignment="Right" Margin="10" Width="355">

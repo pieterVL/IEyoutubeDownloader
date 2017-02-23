@@ -23,6 +23,37 @@ namespace IEyoutubeDownloader
         public youtubePreview()
         {
             InitializeComponent();
+            PreviewMouseLeftButtonUp += (sender, args) => onClick();
+            this.txtTitel.Text = "lorem ist imput dat ich nicht ipsum dolor sit amet";
+            this.txturl.Text = "azertyuiopqsdfghjklmwxcvbnazertyuiopqsdfghjnb";
+            this.lblLength.Content = "3.14";    
+        }
+
+        public static readonly RoutedEvent ClickEvent = EventManager.RegisterRoutedEvent(
+"Click", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(TabItem));
+
+        public event RoutedEventHandler Click
+        {
+            add { AddHandler(ClickEvent, value); }
+            remove { RemoveHandler(ClickEvent, value); }                         
+        }
+
+        void onClick()
+        {
+            RoutedEventArgs newEventArgs = new RoutedEventArgs(youtubePreview.ClickEvent);
+            RaiseEvent(newEventArgs);
+            System.Windows.Forms.MessageBox.Show("Test");
+        }
+
+        private void url_block_mouse_enter(object sender, MouseEventArgs e)
+        {
+            ((TextBlock)sender).Foreground = new SolidColorBrush(Colors.MediumSlateBlue);
+        }
+
+        private void url_block_mouse_leave(object sender, MouseEventArgs e)
+        {
+            ((TextBlock)sender).Foreground = new SolidColorBrush(Colors.Transparent);
+
         }
     }
 }

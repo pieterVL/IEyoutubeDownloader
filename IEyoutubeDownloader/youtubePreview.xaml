@@ -5,13 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:IEyoutubeDownloader"
              mc:Ignorable="d" 
-             d:DesignHeight="160" d:DesignWidth="380" Cursor="Hand">
+             d:DesignHeight="160" d:DesignWidth="379" Cursor="Hand">
 
-    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="380">
+    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="379">
         <Grid>
             <Image x:Name="img" HorizontalAlignment="Left" Height="138" Margin="10,10,0,0" VerticalAlignment="Top" Width="164"/>
             <TextBlock x:Name="txtTitel"  FontFamily="Arial" FontSize="19" Margin="179,10,10,0" Text="Titel" TextWrapping="WrapWithOverflow"/>
             <Label x:Name="lblLength" Content="0:00:00" HorizontalAlignment="Left" Margin="113,128,0,0" VerticalAlignment="Top" Width="61" Height="20" Background="#FF99DDF7" FontFamily="Courier New"/>
+            <TextBlock x:Name="txturl" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="138" Width="168" TextWrapping="Wrap" MouseEnter="url_block_mouse_enter" MouseLeave="url_block_mouse_leave" Foreground="#00000000"/>
 
         </Grid>
     </Border>
